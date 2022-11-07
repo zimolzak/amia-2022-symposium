@@ -375,3 +375,56 @@ approaches to chatbot
 used *FoodNLU*. Reinforcement learning, where reward for reaching stop
 criteria, reward for info gain, penalty for each question.
 Crowdsourced a corpus; that's on github. *CHI* paper too.
+
+
+
+
+# EHR data quality
+
+## Telehealth vs not, for T2DM
+
+wileykk@musc.edu
+
+Higher information score $I$ means observations more regularly
+distributed. Or "information density" score. $N = 5027$. Timeliness
+measure, also timeliness by Hinrich's quotient. Those with telehealth
+have measurements slightly more timely. Completeness measure too. Info
+density: about equal between the two.
+
+## Self report Demographics
+
+team from Geisinger. shikha sinha, raghuveer puttagunta, heather
+marney.
+
+One questionnaire. Race, ethn, language, sexuality/gender, military.
+
+## FIRE ALARM happened!
+
+## All of Us: data QC and assessment methods
+
+Lina Sulieman. Pheno algo replication & diversity. OHDSI pheno
+library: 212 phenos, 763 algorithms.
+
+Denny 2013 Nat Biotech.
+
+Bastarache 2022. pheno reference map
+
+MENA = middle eastern and north african
+
+## Errors in height and weight
+
+Andrew Guide.
+
+Challenge is *individually* implausible values. Auto detection.
+Method: weighted GAM for location scael and shape. wGAMLSS. Kind of
+makes percentiles. Four types:
+
+- extreme SD-score
+- expo-wt moving avg (ewma)
+- consecutive measurements
+- multiple errors
+
+$n = 5,287,792$ weights. 98--99% are no error. Extreme values are
+rare, most are "large consecutive change" type errors, so hard to
+notice. PPV is low for both, so algo does false pos, and weights are a
+little harder. But good sn and sp.
