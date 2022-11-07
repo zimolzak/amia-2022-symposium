@@ -160,3 +160,168 @@ certain nodes in BPMN."
 ## Q and A
 
 Not Group exercise. Those slides are pp. 21--27 of the PDF.
+
+
+
+
+
+# Academia industry lessons workshop
+
+Research expertise and the data, and reputation, versus money and
+scaling and talent.
+
+Loop these three types of study: performance, usability, impact. There
+are phases, much like phases in drug trials[^phase]. Discovery,
+performance, efficacy, *therapeutic* efficacy (including UI design),
+safety and effectiveness.
+
+[^phase]: Park Y *et al*. Evaluating artificial intelligence. *JAMIA
+Open* 2020 Sep 8.
+
+Gift vs grant vs contract.
+
+
+
+
+
+# Year in Review
+
+"When in doubt, do good work." Hripcsak's Hrule.
+
+## Education
+
+What is is, vs how to use, vs create next thing, vs teach *using*
+informatics.
+
+*Appl Clin Inform* Shenson et al. Engaging housestaff as informatics
+ collaborators. Lots of projects like order sets. Make team
+ responsible visible.
+
+*Appl Clin Inform* Patel J et al. A data-driven assessment of the us
+ health informatics programs. 94 universities. Only 58% with course in
+ DB mgt. Lacks training in sociotechnical.
+
+*Psicothema* Early prediction of student learning performance through
+ data mining. Javier Lopez-Zambrano et al.
+
+Humphreys BL et al. *Transforming Biometical Informatics and Health
+Information*. Don Lindberg and the US NLM. 2021. IOS press. Another
+chapter on the Woods Hole course.
+
+## people and organization
+
+Abraham J et al. *JAMIA* Risk factors associated with medication
+ordering errors. WashU. 1000 void, 800 err, 190 reached patient, 0
+harm. Interviewed 355 people, Sys Egr Init for Pt Safety.
+
+Giardina and Singh
+
+## Clinical research
+
+Ficek et al JAMIA
+
+Jamia, design and impl of an integratede data model to support clin &
+transl. Wood E, Campion T. Cornell
+
+## Nursing
+
+Use ML to transform standard nurse plan to research variables. *JAMIA*
+Maciera et al.
+
+## NLP
+
+Lederman A et al. Uni Melbourne. JAMIA.
+
+## open source
+
+open source auto insulin. NEJM. burnside M et al. uni Otago new
+zealand. Apps for smartphone. Not regulated. AndroidAPS compared to
+manual pump mgt.
+
+## kd and data mining
+
+xu z, wang f et al. Crit Care. Sepsis subphenotyping. 72 SOFA scores
+and clustered based on trajectories. Phenotypes called RI DI DW RW for
+some reason. Basically unsupervised.
+
+Nat Med. Prospective, multi-site study. Adams, Saria et al.
+
+## Visual analytics
+
+Vbridge. IEE trans vis comp graph. Cheng and Veeramachaneni. Features
+and data to explain healthcare models.
+
+## problem evolution
+
+a flexible framework. JBI. makoto. uni utah. Cohorts over time.
+
+## decision support
+
+mccoy wright jamia clickbusters. 10 step process.
+
+## mental health
+
+dna methylation of childhood trauma predict psy disorders 17 yr after.
+*Molecular Psychiatry*.
+
+## consumer
+
+debunking health misinformation. mourali m et al. calgary. *JMIR*.
+Little known about impact of corrections. What's the impact of
+extended back and forth of false claims (on attitudes). *N* = 500,
+view these debates.
+
+symptom checker apps. Schmieding M et al. *JMIR*. Some have got beter.
+Healthy Children, Drugs.com, Isabel, Symptomate. Median triage
+accuracy 59% to 55% (about whether you should go in). Apps in 2020
+were *less* risk averse. Few apps outperformed laypersons.
+
+## Theme: DEI
+
+gichoya J, Zhang H. emory. race detection in x-ray.
+
+quality of sdoh. Cook L, Weiskopf N. JAMIA. OHSU. impute, use multiple
+sources, use validated tools.
+
+## Theme: Women
+
+comparison of women and men. hartzler A, stipelman C. UWashington. *JAMIA*.
+4700 submissions, acceptance rates, sentiment analysis. Women 1st
+author increased 38 to 43, then 37 to 44. sentiment the same M vs W.
+Also looked at awards. Years 2017--2020 trends.
+
+gender repr *JAMIA*. griffin A, chung A. UNC. public web sites, 74%
+progs let by men, 83% fellowships men.
+
+women IT managers in Saudi Arabia. aldekhyyel R et al. *JAMIA*. Not
+particular social challenges. It was the field itself.
+
+Bright T, Mccoy A et al. AMIA first look program *JAMIA*. The program
+increased the interest of 87 ishg women. Linkedin profile review.
+
+Grando A, Chapman W. Women in AMIA leadership program. *JAMIA*. Pre
+post survey about using strengths, know career vision, leadership
+ocnfidence, circumvent barriers, influence decision, guide a group,
+prepare for change, manage conflict.
+
+## Theme: Ethics
+
+*BMC Medical Ethics*. Tosoni S, Liu F. consent on sharing personal
+ health information. Share what and with whom. Discomfort went down a
+ bit, mostly.
+
+triplett c, bloss c. UC La Jolla. *JAMIA*. tribal perspective on
+privacy and health data sharing. Codesign.
+
+A Scoping review of ethics considerations. elhadad n. *JAMIA*.
+
+## Making sense
+
+There are 27, which includes working groups, plus Women DEI and 25x5
+(committees). *N* = 90 some papers. Presented 48. 33 from JAMIA. COVID
+papers from 13 to 11 to 6. Had 3 systematic reviews, 5 scoping
+reviews, 1 rapid review.
+
+
+
+
