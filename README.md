@@ -325,3 +325,53 @@ reviews, 1 rapid review.
 
 
 
+# Doctoral Dissertation S30
+
+Hripcsak S29 standing room only, in breakout room not ballroom.
+
+## annotation efficient DL
+
+zongwei zhou. Annotate those points that are close to decision
+boundary. Diversity-based: don't annotate two points that are very
+close together in space. Computing diversity (completely) and
+maximizing that turns out to be NP-hard. published in journal of
+digital imaging, medical image analysis, CVPR (a computer vision
+conference). Active selection is better than random at improving
+efficiency of annotation.
+
+UNet++: has "deep supervision." Triangular array of nodes $X^{0,0}$ at
+left corner of triangle, to $X^{m,0}$ at bottom corner, and $X^{0,m}$
+at right corner.
+
+https://github.com/mrgiovanni
+
+https://arxiv.org/abs/1912.05074v2
+
+## AI for Health Coaching
+
+Elliot Mitchell, sr data sci at Geisinger
+
+Chronic conditions on the rise. T2DM.
+
+AI:
+: able to perform taks that require intelligence
+
+ML:
+: learns from data
+
+Rule based:
+: does a task based on machine-readable repr of knowledge
+
+*Computer Supported Collaborative Work* 2021. Chatbot vs human
+ coaching. About 10 pt per group, 4 coaches.
+
+approaches to chatbot
+
+- scripted
+- rule based
+- data driven (reinforcement learning)
+- random
+
+used *FoodNLU*. Reinforcement learning, where reward for reaching stop
+criteria, reward for info gain, penalty for each question.
+Crowdsourced a corpus; that's on github. *CHI* paper too.
