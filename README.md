@@ -18,7 +18,7 @@ https://tinyurl.com/amia-cds
 Jenders. Knowl repr includes Arden, HQMF, and CQL Clin Qual Language.
 Core to HL7 is the FHIR data model. Knowl access examples
 (competitors?) include infobutton, CDS hooks, and SMART on FHIR. HQMF
-declarative, in contrast to arden or CQL.
+declarative, in contrast to Arden or CQL.
 
 Arden: originally late 1980s. Original idea was docs could validate a
 Medical Logic Model by inspection, but that didn't really happen. XML
@@ -69,7 +69,7 @@ Howard Strasberg.
 
 What is the EHR event that triggers a call to the
 CDS server? Common ones would be opening a patient chart, or ordering
-a medicationl. One of original reasons it was developed was: SMART on
+a medication. One of original reasons it was developed was: SMART on
 FHIR apps exist, but you need to know the app exists
 
 Implementation *process* more than flipping a switch.
@@ -87,7 +87,7 @@ Ken Kawamoto, Utah
 Epic SMART on FHIR CDS hooks all production-supported. Cerner starting
 to get hooks, has other alternative. Tried with bilirubin[^bili]. Won
 first HL7/AMIA FHIR app showcase. How do you avoid just adding more
-alterts? We call it a win and are glad when they follow the alert 15%
+alerts? We call it a win and are glad when they follow the alert 15%
 of the time! Meaning 85% of the time useless. Another one, diabetes rx
 shared decision[^dmshared][^dms2]. And for opioid uses CDS
 Hooks. Regex to parse the prescription *Sig*. About 20% are
@@ -115,7 +115,7 @@ doi:10.1001/jamanetworkopen.2019.15343
 Lung cancer screening shared decision,
 sponsored by AHRQ. CMS requires you to use decision aid before you
 screen. 23-var predictive model from NCI. MDCalc for EHR. Also CDS
-hooks to *prompt* smart on fhir app use.
+hooks to *prompt* smart on FHIR app use.
 
 Vendor differences: what data can be *read* or *written*. And also
 *speed* is rarely talked about but actually big challenge. Vendors to
@@ -149,7 +149,7 @@ sum(score)`.
 
 Used to fill in gaps with Java code; now we have DMN.
 
-Arden: can do decis support rulle
+Arden: can do decis support rule
 
 CQL: an expression language, more about terminologies and data access
 
@@ -204,7 +204,7 @@ informatics.
 *Psicothema* Early prediction of student learning performance through
  data mining. Javier Lopez-Zambrano et al.
 
-Humphreys BL et al. *Transforming Biometical Informatics and Health
+Humphreys BL et al. *Transforming Biomedical Informatics and Health
 Information*. Don Lindberg and the US NLM. 2021. IOS press. Another
 chapter on the Woods Hole course.
 
@@ -220,7 +220,7 @@ Giardina and Singh
 
 Ficek et al JAMIA
 
-Jamia, design and impl of an integratede data model to support clin &
+JAMIA, design and impl of an integrated data model to support clin &
 transl. Wood E, Campion T. Cornell
 
 ## Nursing
@@ -234,13 +234,13 @@ Lederman A et al. Uni Melbourne. JAMIA.
 
 ## open source
 
-open source auto insulin. NEJM. burnside M et al. uni Otago new
-zealand. Apps for smartphone. Not regulated. AndroidAPS compared to
+open source auto insulin. NEJM. Burnside M et al. uni Otago new
+Zealand. Apps for smartphone. Not regulated. AndroidAPS compared to
 manual pump mgt.
 
 ## kd and data mining
 
-xu z, wang f et al. Crit Care. Sepsis subphenotyping. 72 SOFA scores
+xu z, Wang f et al. Crit Care. Sepsis subphenotyping. 72 SOFA scores
 and clustered based on trajectories. Phenotypes called RI DI DW RW for
 some reason. Basically unsupervised.
 
@@ -248,39 +248,39 @@ Nat Med. Prospective, multi-site study. Adams, Saria et al.
 
 ## Visual analytics
 
-Vbridge. IEE trans vis comp graph. Cheng and Veeramachaneni. Features
+Vbridge. IEEE trans vis comp graph. Cheng and Veeramachaneni. Features
 and data to explain healthcare models.
 
 ## problem evolution
 
-a flexible framework. JBI. makoto. uni utah. Cohorts over time.
+a flexible framework. JBI. makoto. uni Utah. Cohorts over time.
 
 ## decision support
 
-mccoy wright jamia clickbusters. 10 step process.
+McCoy wright JAMIA clickbusters. 10 step process.
 
 ## mental health
 
-dna methylation of childhood trauma predict psy disorders 17 yr after.
+DNA methylation of childhood trauma predict psy disorders 17 yr after.
 *Molecular Psychiatry*.
 
 ## consumer
 
-debunking health misinformation. mourali m et al. calgary. *JMIR*.
+debunking health misinformation. mourali m et al. Calgary. *JMIR*.
 Little known about impact of corrections. What's the impact of
 extended back and forth of false claims (on attitudes). *N* = 500,
 view these debates.
 
-symptom checker apps. Schmieding M et al. *JMIR*. Some have got beter.
+symptom checker apps. Schmieding M et al. *JMIR*. Some have got better.
 Healthy Children, Drugs.com, Isabel, Symptomate. Median triage
 accuracy 59% to 55% (about whether you should go in). Apps in 2020
 were *less* risk averse. Few apps outperformed laypersons.
 
 ## Theme: DEI
 
-gichoya J, Zhang H. emory. race detection in x-ray.
+gichoya J, Zhang H. Emory. race detection in x-ray.
 
-quality of sdoh. Cook L, Weiskopf N. JAMIA. OHSU. impute, use multiple
+quality of SDOH. Cook L, Weiskopf N. JAMIA. OHSU. impute, use multiple
 sources, use validated tools.
 
 ## Theme: Women
@@ -290,18 +290,18 @@ comparison of women and men. hartzler A, stipelman C. UWashington. *JAMIA*.
 author increased 38 to 43, then 37 to 44. sentiment the same M vs W.
 Also looked at awards. Years 2017--2020 trends.
 
-gender repr *JAMIA*. griffin A, chung A. UNC. public web sites, 74%
+gender repr *JAMIA*. griffin A, Chung A. UNC. public web sites, 74%
 progs let by men, 83% fellowships men.
 
 women IT managers in Saudi Arabia. aldekhyyel R et al. *JAMIA*. Not
 particular social challenges. It was the field itself.
 
-Bright T, Mccoy A et al. AMIA first look program *JAMIA*. The program
+Bright T, McCoy A et al. AMIA first look program *JAMIA*. The program
 increased the interest of 87 ishg women. Linkedin profile review.
 
 Grando A, Chapman W. Women in AMIA leadership program. *JAMIA*. Pre
 post survey about using strengths, know career vision, leadership
-ocnfidence, circumvent barriers, influence decision, guide a group,
+confidence, circumvent barriers, influence decision, guide a group,
 prepare for change, manage conflict.
 
 ## Theme: Ethics
@@ -354,7 +354,7 @@ Elliot Mitchell, sr data sci at Geisinger
 Chronic conditions on the rise. T2DM.
 
 AI:
-: able to perform taks that require intelligence
+: able to perform task that require intelligence
 
 ML:
 : learns from data
@@ -374,7 +374,7 @@ approaches to chatbot
 
 used *FoodNLU*. Reinforcement learning, where reward for reaching stop
 criteria, reward for info gain, penalty for each question.
-Crowdsourced a corpus; that's on github. *CHI* paper too.
+Crowdsourced a corpus; that's on GitHub. *CHI* paper too.
 
 
 
@@ -409,14 +409,14 @@ Denny 2013 Nat Biotech.
 
 Bastarache 2022. pheno reference map
 
-MENA = middle eastern and north african
+MENA = middle eastern and north African
 
 ## Errors in height and weight
 
 Andrew Guide.
 
 Challenge is *individually* implausible values. Auto detection.
-Method: weighted GAM for location scael and shape. wGAMLSS. Kind of
+Method: weighted GAM for location scale and shape. wGAMLSS. Kind of
 makes percentiles. Four types:
 
 - extreme SD-score
@@ -445,8 +445,8 @@ what to expect.
 ## Modeling sx control with HL7 FHIR
 
 Nan Huo. FHIR-based mCODE model: "minimal common oncology data
-elements." E2C2 project at Mayo: surveys pts on sx---"ehr
-fffacilitated cancer symptom control." The things that collects were
+elements." E2C2 project at Mayo: surveys pts on sx---"EHR
+facilitated cancer symptom control." The things that collects were
 not covered by mCODE. FSH is FHIR shorthand, a domain specific lang
 for defining FHIR. $N = 25$ vars in E2C2, and $\frac{11}{25}$ are not
 well covered, hence extending the model. FHIR allows mult tools: *FSH
@@ -652,11 +652,11 @@ Me
 
 Fouladvand, Stanford. Some costs due to pt factors like how sick, and
 others due to deviations in medical practice and delivery. Psychoses
-has most enpat days at 3679, BMT 3002, ECMO or trach with vent > 96hr
+has most inpatient days at 3679, BMT 3002, ECMO or trach with vent > 96hr
 next 2893. Each MS-DRG has a coefficient of variation. DRG ranked by
-direct cost: ecmo with 100%, bmt 67%, heart transplant 66%, etc.
+direct cost: ECMO with 100%, BMT 67%, heart transplant 66%, etc.
 Thirdly, rank by encounter frequency *and* variance of direct costs:
-heart transplant with MCC, then ecmo, then heart transplant without
+heart transplant with MCC, then ECMO, then heart transplant without
 MCC. Eventually, $I = \frac{q \cdot \sigma}{p}$ where $I$ is impact,
 $q$ is volume, $\sigma$ is variability, $p$ is predictability.
 
@@ -671,11 +671,11 @@ implementation (also ERIC[^eric] and ITIM[^itim] which is kind of
 hybrid ImpSci and informatics). Charted the data on multiple axes
 like what HIT function (was it CDS, risk ident, provider assessment,
 patient decision aid, tracking adherence); or what exact activity was
-supported by the HIT; $etc*.
+supported by the HIT; *etc*.
 
-[^reaim]: glasgow 1999
+[^reaim]: Glasgow 1999
 
-[^eric]: powell 2015
+[^eric]: Powell 2015
 
 [^itim]: schoville 2015
 
