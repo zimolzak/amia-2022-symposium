@@ -657,8 +657,28 @@ next 2893. Each MS-DRG has a coefficient of variation. DRG ranked by
 direct cost: ecmo with 100%, bmt 67%, heart transplant 66%, etc.
 Thirdly, rank by encounter frequency *and* variance of direct costs:
 heart transplant with MCC, then ecmo, then heart transplant without
-MCC.
+MCC. Eventually, $I = \frac{q \cdot \sigma}{p}$ where $I$ is impact,
+$q$ is volume, $\sigma$ is variability, $p$ is predictability.
 
 ## HIT for 2ndary CA prevention, review
 
-Constance Owens, George Mason
+Constance Owens, George Mason. Cancer screening works, colon, breast,
+cervical, but under-used. HIT effective, often used to promote. But
+need to know barriers/facilitators. And how do they actually do the
+enhancement of screening? Final studies $n=101$. US-based, and
+published 2015--2021. RE-AIM[^reaim] framework about dissemination and
+implementation (also ERIC[^eric] and ITIM[^itim] which is kind of
+hybrid ImpSci and informatics). Charted the data on multiple axes
+like what HIT function (was it CDS, risk ident, provider assessment,
+patient decision aid, tracking adherence); or what exact activity was
+supported by the HIT; $etc*.
+
+[^reaim]: glasgow 1999
+
+[^eric]: powell 2015
+
+[^itim]: schoville 2015
+
+Found 34% non experimental, 29% RCT. Often not reporting racial
+make-up of population. Most popular HIT functions: cds panel mgt and
+outreach, cds point of care, track adherence.
