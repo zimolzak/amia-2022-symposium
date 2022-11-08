@@ -428,3 +428,237 @@ $n = 5,287,792$ weights. 98--99% are no error. Extreme values are
 rare, most are "large consecutive change" type errors, so hard to
 notice. PPV is low for both, so algo does false pos, and weights are a
 little harder. But good sn and sp.
+
+
+
+
+
+# Cancer, S90
+
+## prostate
+
+Ellen. likelihood visualization for patients, side effects of external beam
+radiation for prostate cancer. Other tx in future: brachy, stereotactic,
+radiation surgery. Even if only one main tx, still help pt understand
+what to expect.
+
+## Modeling sx control with HL7 FHIR
+
+Nan Huo. FHIR-based mCODE model: "minimal common oncology data
+elements." E2C2 project at Mayo: surveys pts on sx---"ehr
+fffacilitated cancer symptom control." The things that collects were
+not covered by mCODE. FSH is FHIR shorthand, a domain specific lang
+for defining FHIR. $N = 25$ vars in E2C2, and $\frac{11}{25}$ are not
+well covered, hence extending the model. FHIR allows mult tools: *FSH
+tools,* (which they used,) but also *Forge FHIR*. Created
+`CancerSymptomType` extension; can include that in `SymptomScore`
+profile. Want standard codes but don't have those for some E2C2
+elements like `time_since_last_hospitalization`. See also
+https://github.com/fhircat/e2c2-fsh-modeling
+
+## Lung Cancer Screening Shared Decision Making
+
+Polina Kukhareva. App economy timeline: FHIR, SMART on FHIR, US Core
+FHIR, and 2021 interoperability rules. ReImagine EHR: create once, use
+everywhere.
+
+inaccuracies in electronic health records smoking. *JAMIA* Kukhareva
+et al.
+
+## mCODE 3 year update
+
+@TravisOsterman from Vandy. CodeX. EHR endpoints for cancer clinical
+trials. Lot of time abstracting outcomes into data capture. But try
+EHR. We have 16 trials using ICAREdata, actively working on adverse
+event reporting too. Prior auth: build on DaVinci specs to supplement
+PA reqs with mCODE. mCODE maturity: tech review group wants to make
+some commitments to implementers (about likelihood, frequency,
+magnitude) of changes, and commit to not doing "breaking changes." FMM
+= FHIR Maturity Model, which goes from "Draft (0)" to "FMM 6." Level
+FMM 4 is we discuss with implementers before making
+non-backward-compatible breaking changes. So like `Treatment` domain
+is FMM 3, and `Assessment`, `Disease`, and `Patient` are $\ge 4$.
+`Assessment` includes comorbidities, and "comorbidities are hard."
+Least mature is `Genomics` domain: you're not routinely using FHIR to
+access structured genomic data from your EHR, maybe because you don't
+even *have* structured genomic data in your EHR! Level FMM 4 doesn't
+*preclude* breaking changes, but we will *discuss*. FMM is ironically
+not computable. Take the mCODE STU 2 data model and overlay the FMM on
+it with, say, color coding. Thanks to CodeX members and Community of
+Practice. travis.osterman@vumc.org
+
+## Chemo and response (RECIST) from clinical notes
+
+UTHealth SBMI. Xu Zuo. Irrelevant: increased growth of eye lashes.
+Hypotheses: would consider $X$ if there is good response to
+carboplatin. Negation: MRI does not show any clear evidence of
+progression. RECIST := {PD, SD, PR, CR}. Cohen's $\kappa = 0.78$. Can
+compute a "cross-sentence distance." Split $n = 600$ training, and 100
+test. Distance between chemo mentions and response mentions. Distance
+7 ish based on sentence, 60 something based on token. Interpreted as
+"kind of near each other." "Unable to complete information extraction
+using one single model."
+
+
+
+
+
+# Research Informatics S70
+
+## VIADS
+
+Visual interactive analysis for filter/summarize large Data Sets.
+Needs to be hierarchical terminology.
+
+## consenting
+
+Jihad Obeid, MUSC. In-person consenting is challenging. Travel, safety
+during pandemic, time, Federalwide Assurance (FWA) at sites. They
+Compared 3 remote modalities: paper, e-consent (REDCap link where
+patient gets a link and signs), teleconsent (video communication with
+doxy.me). Several usability questionnaires like IBM CSUQ, NASA TLX.
+
+## synthetic data from privacy-preserving synthesis
+
+Mandis Beigi, Medidata.
+
+- Why deep ANN don't work for generating
+clinical trial data.
+
+- Fidelity evaluation metrics for synthetic data.
+
+- Differential privacy and privacy evaluation tests.
+
+Deident, "just" remove PII like name, SSN, DOB. Then data aggregation
+like $k$-anonymity. Then generation: variational autoencoder, GAN,
+MedGAN, CTGAN, RNN. Local data $r^i \to$ embed into lower-dim metric
+space $v^j$. Select a seed point, find its $k$ neighbors in $v$ space,
+generate new records by randomly selecting features from its $k$
+neighbors. Add truncated Gaussian noise. Finally filtering like
+outlier detection, $k$-anonymity check, and make sure data comes from
+$\ge 3$ sponsors. "Fidelity and privacy is a zero-sum game." Fidelity
+evaluation, also privacy evaluation.
+
+## semi-automate certainty of evidence
+
+@IrbazRiaz
+
+Living systematic reviews[^lsr] exist, but want living *interactive*
+systematic reviews, because search $\to$ extract $\to$ etc. is hard.
+And also users can interact with results/evidence. Web based UI for
+looking at evidence. The meta-a itself can't necessarily tell you
+things like risk of bias; have to go back to study itself. Need
+measure $I^2$ of inconsistency[^guyatt]. Finally, human in the loop.
+Overall Certainty of Evidence $\approx f($ risk of bias +
+inconsistency + indirectness + imprecision + publication bias +
+importance). PI Huan He.
+
+[^lsr]: Elliott *et al*. 2014 *PLOS Medicine*.
+
+[^guyatt]: Guyatt *et al*. 2011 *J Clin Epi*.
+
+
+
+
+# Evaluation Methods S80
+
+Moderator: Li Zhou, of BWH.
+
+## Eval of ML for COVID outcome prediction
+
+Batia Wiesenfeld, NYU Business. Pressure to discharge patients who are
+improving, to make room. *Whom can I discharge safely?* Want to know
+who has low risk in the subsequent 36 hours. Model[^rasav] not
+described here. It is cloud based. *Convergent parallel mixed-methods*
+design. Model implemented as a RCT; every other patient had
+predictions masked. Phase 1 of evaluation: Survey the staff, $N = 175$
+respondents. Question: are tool users different from non-users (in
+their survey responses)? Phase 2: qualitative. $M = 10$. RCT somewhat
+underpowered. Overall reduction about 0.2 days LOS, not significant,
+powered for 0.5 day. $N \approx 1000$ patients in that RCT (*q.v.*).
+Attendings ($n \approx 90$) were real target group. Users
+significantly less uncertain, better able to anticipate discharge,
+compared to non-users. Confidence: yes more confident, but fully
+mediated by "able to anticipate" and not mediated by "less uncertain."
+Prelim evidence says AI actually leads to investigating case *further*
+(among those who trust the AI).
+
+Qualitative Themes:
+
+- We lacked mental models of *e.g.*, disease course.
+- We didn't have treatment algorithms.
+- Hard to interpret markers if they're contradictory.
+- Uncertainty was psychologically taxing, 2-hump nature traumatizing.
+
+Over time they relied on tool less. They knew who was okay and who was
+not. Had a mental model at that point. Sometimes information overload
+later, too.
+
+[^rasav]: Rasavian et al 2021 *NPJ Digital Medicine*
+
+## Summarization for Barrett
+
+Ali Soroush, instructor, Columbia. Courtney Diamond. "Event level
+summaries." Data extraction. Esoph adenoCA is rising, and screening is
+a thing[^shahe]. Normal, Barrett's, dysplastic Barrett's, cancer.
+Manual extraction is hard. Automated extraction of administrative
+codes has "inadequate granularity" and "poorly captures temporality."
+Meaning: can't say subtypes of BE, and can't say who's on standard of
+care. NLP often applied to c-scope screening. Extracted BE from
+pathology at VA[^nguy]. They want to do data extraction too. Path text
+from CUMC data repo (epic and allscripts) plus structured from
+Provation procedure DB. Extract CUI with MetaMap Lite. Provation has
+dropdowns etc. Years 2016--2020, must have BE as an indication
+$n=977$. Had devel and validation of 150 each. $\frac{105}{150}$ had
+confirmed BE. Like 350--390 "unique events."
+
+1. remove headers, punctuation
+2. merge impression into 1 list
+3. merge notes with procedure data
+4. extract concepts
+5. expert-created rule base used to make an event-level summary
+
+Metamap plus negex specifically extracted location:diagnosis pairs.
+Columns like "what was the endoscopic treatment" and "what was the
+diagnosis." Had some reviewers. Calculated $\kappa$ plus acc, F1, Pr,
+Re.
+
+**Results:** F like 0.836 dev, and 0.824 in validation. For binary "no
+dys vs bad" or "no ca vs ca" they did some more performance
+characteristics.
+
+Kinds of error:
+
+- NER
+- semantic analysis (like path says could be this or that)
+- database (missing report)
+- human (typo "Barret")
+
+First *data extraction and summarization pipeline*. Limitation:
+pre-processing needs to be adapted to each institution. Rules based
+parts too. But guiding principles should remain generalizable across
+institutions. Or if an institution doesn't use Provation, or if the
+procedure doc will modify the text output by Provation.
+
+[^nguy]: Wenker et al CGH 2022
+
+[^shahe]: Shaheen et al AJG 2022
+
+## Emergency presentation measure
+
+Me
+
+## Modifiable Inpatient cost variability
+
+Fouladvand, Stanford. Some costs due to pt factors like how sick, and
+others due to deviations in medical practice and delivery. Psychoses
+has most enpat days at 3679, BMT 3002, ECMO or trach with vent > 96hr
+next 2893. Each MS-DRG has a coefficient of variation. DRG ranked by
+direct cost: ecmo with 100%, bmt 67%, heart transplant 66%, etc.
+Thirdly, rank by encounter frequency *and* variance of direct costs:
+heart transplant with MCC, then ecmo, then heart transplant without
+MCC.
+
+## HIT for 2ndary CA prevention, review
+
+Constance Owens, George Mason
