@@ -897,7 +897,217 @@ scientific review committee added. Our cancer center has that. So that
 it's about good ideas not good money. Meeker: an example is they
 rejected All of Us because it's not part of our priorities.
 
+Harle: Can bean count but others' stories about impact (those on the
+clinical research team) become your greatest advocate. Campion: yeah
+the five star yelp review.
+
+Q: ideal user experience. Visweswaran: Projects that succeed have a
+**translator**.
+
+Boyd-knosp@uiowa.edu
+
+## My questions
+
 *my question* Problems with analyze within enclave? For what types of
 project does enclave not work?
 
-*my question* startup phase, and capacity
+Answer: not only one enclave. There's n3c, all of us, and uni supercompute. mostly
+it's making enclave flex enough. Sometimes it's go get a superuser and
+come back. sometimes it's getting experience with enclave style of
+working. We now punt those who want the data themselves; we punt and
+say we no longer have Box.
+
+*my question* startup phase, and capacity is limited there too, so how
+to bootstrap?
+
+6 yrs ago used my CTSA 300--400 k to build warehouse, used that
+informatic budget. Had a prior person who tried and knew all source
+systems. One fte at beginning to get it up and running, okay because
+experienced and passionate about succeeding this time around, and gave
+him control. Couple years no servicing just build. Plus 0.5 fte
+systems person for the machines. Now start doing service, said no get
+a CRIO, they did, figured the BAA etc. Now 32 fte. fte is most of
+budget. we buy servers and use an existing general purpose uni
+facility where they let us stick them. Maybe 10% is stuff and not fte.
+
+
+
+
+# Awards
+
+Distinguished posters, students.
+
+- Identity management challenges, Biya Cham.
+- Health care disparity, now what, Rohan Chanani.
+- consortium blockchain sharing, ahmed elhussen
+- enhancing biologic adverse event surveillance, ezzeldin
+- explaining alerts, anoom mayampurath
+- hacking mental health, elise russo
+- when alerts work as exptected, sarah thompson
+
+apps
+
+1. kenrick cato, communicating narrative concersn
+
+lief best paper
+
+- online training on allgorithmic bias, benjamin collins
+
+forsythe award social science
+
+- putting social in sociotechnical,
+- disappearing expertise, laurie novak
+
+ethical legal
+
+- engaging disabiity community, r valdez
+- microaggression clues from social media, ryu and pratt
+
+homer warner award, best paper in approaches to improving fields
+
+- tailoring rule based data quality assessment, yahia mohamed UMKC
+
+nursing student paper
+
+1. unsupervised post covid mental health, katherine a brown
+2. barriers to post actue care, erin e kennedy
+
+werley award, greatest nursing paper
+
+- evaluation of telehealth expansion, gregory l alexander
+
+distinguished papers
+
+- opportunities for suicide prevention, hannah burkhart
+- briding granularity gap in fhx, sungrim moon
+- hierarch aware adverse reaction embeddings, venkata joopudi
+
+
+
+
+
+# Accessibility for persons with disabilities
+
+Denis Newman-Griffis, uni sheffield, DEI retention/advancement
+subcommittee.
+
+Bonnielin K Swenor, JHU.
+
+*Informatics to enhance accessibility and achieve equity for persons
+with disabilities*
+
+Disability: definition, valence, experts. PWD are 1 in 4[^pwd], a very large
+important group. Medical model. Now social model: social construct.
+From disability rights to disability *justice*[^justi]. Not
+"overcoming" something. It is part of who I am.
+
+[^pwd]: varadaraj jama netw open 2021
+
+[^justi]: Berne et al. Womens studies qrtr. 2018
+
+Idea that PWD are a health disparity population[^kra]. Fewer
+mammograms and Pap, more obesity, different education, income,
+unemployment. Intersectional: stratify by race, *etc*. COVID and food
+inequity[^assi]. People with sensory, cognitive, etc disability were
+delaying getting food during pandemic.
+
+[^assi]: Assi et al. DHJO. 2022
+
+[^kra]: krahn et al. ajph. 2015
+
+Equality:
+: treat everyone the same
+
+Equity:
+: give everyone what they need
+
+Justice: change the laws etc. Make problems not even happen. *Ableism*
+and *inaccessibility* are two sources of injustice.
+
+Ableism:
+: idea that less capable, less value, should have less power
+
+Most (82%) Docs perceive that PWD have a worse quality of life than
+those who don't[^iezz]. That's what we're taught. You might think, "of
+course." But disability community disagrees. Things were not built for
+PWD, though. Likewise, not to say QOL is equal. But to say "everyone
+with disability has low QOL" is ableism.
+
+[^iezz]: iezzoni et al. Health aff. 2021.
+
+Lots of times accessibility is imagined to be physical space, or maybe
+Web sites. But also information, interactions, services, programs,
+facilities, environments. If it takes $5 \times$ as long, that's not
+accessibility. Also often viewed as someone else's problem.
+Registering for COVID vaccine inaccessible for those with vision
+disabilities: not compatible with screen readers. Made a
+dashboard[^jo] and worked with WebAIM. The variation among states is a
+systemic *injustice* that led to inequity. DOJ came in to enforce ADA
+and settled with a number of store chains.
+
+[^jo]: jo et al. DHJO 2022.
+
+Data and information back to the community can help to dismantle
+injustices. Data: Tool for change and for ensuring equitable
+distribution of power.
+
+CDC disability:
+: any condition that makes it more difficult to do certain activities
+and interact with world.
+
+ADA disability:
+: a physical or mental impairment that substantially limits one or
+more major life activities.
+
+#SayTheWord means *disability* is not a bad word. People are afraid to
+say or use to describe someone. Person first language. Also community
+language like Deaf community. Language matters[^apa][^afp]. For many people
+"disabled person" is not harmful.
+
+[^apa]: andrews, powell, ayers. dhjo. 2022
+
+[^afp]: anders, forber-pratt. rehabil psychol. 2019
+
+Disability data are not routinely collected[^iez2] like in Medicare
+and Medicaid, although they do have race/ethnicity. Makes it so you
+can't track covid tests, vaccination, infection, outcomes. Data not
+even collected. Want it included as core demographic component, and
+also from the patient's perspective (the person gives the data). It is
+in USCDI from the ONC, at least.
+
+[^iez2]: iezzoni health aff 2011
+
+"All issues are disability issues." Transportation, education, all.
+
+Current paradigm is a PWD has to file complaint or lawsuit. That's not
+an equitable approach. Better data capture moves to more proactive
+approach.
+
+Rupa S Valdez. Engaging the disability community. *AMIA symposium*.
+2022.
+
+## Homework
+
+- be anti-ableist
+- prioritize accessiblity
+- include people with disabilities (as part of your team too)
+- don't wait to take action
+
+## Final quote
+
+> Who counts depends on who is counted[^rms]
+
+[^rms]: Reed, Meeks, Swenor. *Lancet PH*. 2020.
+
+bswenor@jhmi.edu
+
+disabilityhealth.jhu.edu
+
+*Included:* a disability podcast
+
+## Q and A
+
+Q: short resources, what do you say when clashes with reality? A:
+budgets are value statements. So if you allocate this way, it shows
+your values. Communication about disability inclusion is low-cost, at
+least.
