@@ -682,3 +682,222 @@ supported by the HIT; *etc*.
 Found 34% non experimental, 29% RCT. Often not reporting racial
 make-up of population. Most popular HIT functions: cds panel mgt and
 outreach, cds point of care, track adherence.
+
+
+
+
+# safety measures S102
+
+- prescription drug monitoring
+
+## More than algorithms: ML safety events reported to FDA
+
+Farah Magrabi. David Lyell. Use problems were more common among those
+with real harm events. Algorithm error is another type: FFR derived
+from CT. Reported as false neg, and pt had an infarct. Manufacturer
+says: use in conjunction with other data points. Use error: EKG rhythm
+analysis in consumer single-lead device. Pt says: I delayed going to
+ED because it says nothing wrong. Manufacturer says: labeling says it
+doesn't detect MI.
+
+## device safety signals
+
+Fred Resnic, chair of cardiology at Lahey; Tufts. Learning
+effects[^carr] seen in TAVR procedures show change in mortality
+(decrease) and adverse events, after introduction (about 400
+implants). Nonlinear decline and hard to estimate. GLMER model. Then
+second model using operator, institutional clustering, and B-splines
+for nonlinear. Shape of curves is interesting (Weibull, etc.).
+Decompose as $R = f(R_p, R_d, R_e)$ where $R$ is risk, $p$ is patient,
+$d$ is device, $e$ is experience. Estimated event risk (rate) $r \sim
+\mathrm{expo}(a=0, b=0.05, c= 0.03)$. Not always great at fitting the
+learning effect. $N = 200,000$ observations, 1500 operators, 47
+institutions. Good at detecting whether or not there is a learning
+effect.
+
+[^carr]: Carroll *et al*. *JACC* 2017.
+
+## drug drug interactions
+
+sebastien kiogou. Statin ADEs in EMR repositories. Used icd, lab,
+notes. Predict and detect statin-related ADEs. Med table in their CTSA
+repo from 8 hospitals has 110k patients, 31 million rows. Each row is
+one med "order" per patient. Statins: PPLARFS. Orders must be
+complleted, dispensed, sent, or verified. Years 2000--2019. Myopathy,
+rhabdo, liver injury. Big list of ICD for myopathy and liver. Some
+other meds have high potential to interact with statin. Lots of
+sources: ePocrates, LexiComp, searches. Lysine is one of them with
+interaction. Oxazepam, methylllcellulose? Latanoprost. fluphenazine,
+ketotifen. brimonidine.
+
+
+
+
+# Real World Data for Clinical Translational Research S106
+
+Harle C (UF), Meeker D (USC), Visweswaran S (Pitt), Campion TR
+(Cornell), Knosp BM (Iowa).
+
+EDW4R:
+: Enterprise data warehouse for research. Less of a warehouse and more
+of a resource.
+
+What data sources does *your* own institution have? *EDW4R operations
+working group* within CTSA consortium (Knosp and Campion). Interviews
+and content analysis from interviewing warehouse bosses. Lots of
+papers[^ed1][^ed2][^ed3]. Also *JAMIA* special issue.
+
+[^ed1]: murphy sn. research data warehouse best practices. *JAMIA*
+
+[^ed2]: knosp bm. understanding enterprise data warehouses to support clinical
+translational research: enterprise information technology
+relationships, data governance. *JAMIA*
+
+[^ed3]: campion tr. understanding enterprise data warehousess to support
+clinical and translational. *JAMIA*.
+
+## Harle
+
+Was at U Florida, now IU. We call it the IDR, Integrated Data Repo. 2
+billion facts on 1 million patients. Balance these: high quality data
+$\to$ accurate models $\to$ impact on decisions and health. Often we
+get stuck on "the AI model is accurate and cool," which is the middle
+step.
+
+"Paving":
+
+- structured, with i2b2 and OMOP is a real road
+- text rocky
+- imaging rocky
+- physiologic rocky
+- genomcis rocky
+- implementation a little rocky
+
+Break the trade-off between efficiency and service[^trade]. Customers
+don't have the same orders. They have different skills, different
+preferences. When do we "reduce," which means "no soup for you,"
+versus when do we accommodate.
+
+- vending
+- fast food
+- chef prepared
+- personal chef
+
+[^trade]: Frei 2006
+
+## Visweswaran
+
+eMERGE has human-readable versions of "computable" phenotypes but need
+to get implemented at each site. Moving to virtual enclaves, access
+but not download. Used to getting data they can carry with them.
+
+Also want to take a complex model, situate at the Uni hospital, not so
+much in Epic or Cerner, and run them. Their warehouse is called
+*Neptune*. Never had a data warehouse before. Depended on hospital IT.
+That is complicated because we run like 60 clinical systems, Cerner
+inpatient, Epic elsewhere, Children's Cerner, plus this other system
+MARS that taps into HL7 feed. Data goes Epic to Cerner and vice versa
+too, duplicate! Plus insurance claims. Plus researchers have large
+data sets that they want to link to EHR. We said let's pick i2b2 or
+OMOP or PCORNet. But realized need to make something more
+enterprise-level. So instead just copy data over, store with no
+change, monthly, sometimes weekly. Second layer harmonizes and
+especially *deduplicate* like same lab from Epic and Cerner, create
+just one copy. Harmonize all person ident (60 of them). Can't pull PHI
+to university; IRB won't let you. Has to sit in health system. Limited
+data set is ok with our IRB. We don't need to deidentify times; if you
+do, then 1/3 of research questions just can't be done. Now document
+and image data too. We have separate ETL into each model (i2b2,
+PCORNet, OMOP).
+
+We have separate CRIO who does provisioning, Jonathan Silverstein.
+Visweswaran is architect. make sure no junk request, we have a small fee:
+
+- prep to research is free (aggregate)
+- small project $500, safe harbor
+- medium uses LDS
+- large
+
+The warehouse people are PIs on big projects like ENACT, All of Us,
+HuBMAP, *etc*. So that allows them to support them. Exponential rise
+and now getting requests from engineering and comp sci too. Warehouse
+now not an IRB project but a Business Agreement: much easier to scale.
+No IRB amendment when add new data domain. Warehouse is considered an
+extension of the health system under said Business Agreement.
+
+## Daniela Meeker
+
+LA county dept of health services. There is a research oversight
+board. Mostly funded by CTSI but some fee for service (RAND, Harvard,
+*etc*.). As long as partnered with some practicing doc at the County.
+However, conflicts between what researchers want and the business of
+health system.
+
+## Tom Campion
+
+Cornell. Epic in ambulatory first. Cornell University owns all
+outpatient and pays the docs. But relationship with NY Presby. The Uni
+does not own a hospital. Presby used Allscripts. Then there's
+Columbia, who has the same setup. Not own a hospital but their docs
+have admitting privileges at Presby and *two different versions* of
+Allscripts! Then we did one Epic implementation for all of Presby (got
+rid of both Allscripts. Sometimes very difficult to understand because
+Cornell and Columbia are competitors. Columbia and Cornell have their
+own turf for the regional hospitals.
+
+Theirs is called ARCH and was in the *JAMIA* special issue. Slide has
+icons for OHDSI, REDCap, i2b2, many more. Spectrum of raw data up to
+ready. Ingest from 20 source systems $\to$ pre process $\to$ transform
+$\to$ data QA.
+
+> Technical stuff takes more than half our time.
+
+> If we are not delivering data to investigators in rows and columns
+form, we are failing.
+
+## Q and A
+
+**Impact**. A lot of times got to get them to include our CTSA funding
+statement in their paper. Sometimes we don't know the impact. Rather
+Imprecise. UF has marketing and communications *within* IT (wow). We
+also have Google Scholar page (Visweswaran). Meeker: health system
+doesn't care about publications.
+
+Some specific data marts at Cornell, like 20. Fee for service. Some
+bets (making a mart) paid off, and some didn't, and that's okay. We
+did a sepsis mart w/ an intensivist. April 2020, "Make that mart now
+cover everyone in the hospital and start sending nightly to biostats."
+Harle: grants is a big piece. Used to be, "I have a grant, so now give
+me my data." Meeker: most of the bespoke things are for some big
+primary need, whereas self-service is for research that is not
+primary.
+
+Q: considered harmonizing to one and didn't, so is that true for the
+rest off the panelists? Campion: "late binding approach." Campion: We
+are redoing a lot of things our operational colleagues are doing. Need
+to do a better job about sharing our dozens of diabetes phenotypes.
+Visweswaran: with one of the networks (ACT), we're going to put up a
+library with some metadata. You put up your query. Hopefully link to
+publications that come out of that. Going to be executable: download
+query and run. When something gets pushed up to me (Visweswaran), we
+are clinicians, so we know that "When you say *beta blockers,* you are
+probably not listing them all, so use the ontology."
+
+Q: something to quantify, before warehouse vs after? Meeker: Tried but
+hard. We started from zero, so somewhat easier. We also solicited
+anecdotes and put that into our CTSA renewal.
+
+Q: how do you judge external request? Have seen people say, "No we will
+not join Cosmos." So can you talk about times when you said no?
+Campion: we have data for free, but thoughtful interrogation comes at
+a cost. One-off reports we always do as long as there's IRB approval.
+If funding we do more complicated ones (bets on the table). But are
+having capacity challenges. Harle: would like to see thoughtful
+scientific review committee added. Our cancer center has that. So that
+it's about good ideas not good money. Meeker: an example is they
+rejected All of Us because it's not part of our priorities.
+
+*my question* Problems with analyze within enclave? For what types of
+project does enclave not work?
+
+*my question* startup phase, and capacity
